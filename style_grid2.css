@@ -1,0 +1,129 @@
+body {
+    margin: 40px;
+}
+
+aside {
+    grid-area: aside;
+}
+
+section {
+    grid-area: section;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+footer {
+    grid-area: footer;
+}
+
+main {
+    background-color: #eeeeee;
+    color: #444;
+    padding: 10px;
+    margin: auto;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-areas:
+        "header"
+        "nav"
+        "aside"
+        "section"
+        "footer";
+}
+
+.box {
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+header {
+    background-color: blue;
+}
+
+nav {
+    background-color: gray;
+}
+
+footer {
+    background-color: blue;
+}
+
+aside {
+    background-color: #ccc;
+    color: #444;
+}
+
+section {
+    background: rgb(16, 160, 179);
+}
+
+@media only screen and (min-width: 500px) {
+    main {
+        grid-template-columns: 20% auto;
+        grid-template-areas:
+            "header   header"
+            "nav nav"
+            "aside  section"
+            "footer   footer";
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    main {
+        grid-gap: 20px;
+        grid-template-columns: 120px auto;
+        grid-template-areas:
+            "header  header"
+            "nav nav"
+            "aside section"
+            "footer  footer";
+        max-width: 600px;
+    }
+}
+
+form {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, textarea {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #0b6e88;
+}
